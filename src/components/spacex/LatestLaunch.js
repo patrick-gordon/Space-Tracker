@@ -11,7 +11,7 @@ export default function LatestLaunch() {
       .then((res) => {
         setSpaceXData(res.data);
       })
-      .catch((err) => {
+      .catch((err) => { 
         console.log(err);
       });
   };
