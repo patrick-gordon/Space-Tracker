@@ -10,17 +10,16 @@ export default function SpaceXHomePage() {
   return (
     <div>
       <Container style={{marginTop: '4rem'}}>
-        <h1 style={{color: '#AC4139', textAlign: 'center'}}>SpaceX Information</h1>
+        <h1 style={{color: '#FFF', textAlign: 'center'}}>SpaceX Information</h1>
       </Container>
       <Container
         style={{
-          border: "1px solid white",
+          // border: "1px solid white",
           // width: "1216px",
           // height: "262px",
           display: "flex",
           justifyContent: 'space-evenly',
           marginTop: '3rem'
-          
         }}
       >
         <Card
@@ -32,9 +31,10 @@ export default function SpaceXHomePage() {
             textAlign: 'center',
             alignItems: 'center'
           }}
+          onClick={() => history.push("/latestlaunch")}
         >
-          <CardTitle tag="h2" className='mb-5' onClick={() => history.push("/latestlaunch")}>Latest SpaceX <br></br> Launch</CardTitle>
-          <FontAwesomeIcon icon={faArrowAltCircleRight} size='5x' onClick={() => history.push("/latestlaunch")} />
+          <CardTitle tag="h2" className='mb-5'>Latest SpaceX <br></br> Launch</CardTitle>
+          <FontAwesomeIcon icon={faArrowAltCircleRight} size='5x'  />
         </Card>
 
         <Card
@@ -46,9 +46,10 @@ export default function SpaceXHomePage() {
             textAlign: 'center',
             alignItems: 'center'
           }}
+          onClick={() => history.push("/upcominglaunch")}
         >
-          <CardTitle tag="h2" className='mb-5' onClick={() => history.push("/upcominglaunch")}>Upcoming SpaceX Launches</CardTitle>
-          <FontAwesomeIcon icon={faArrowAltCircleRight} size='5x' onClick={() => history.push("/upcominglaunch")} />
+          <CardTitle tag="h2" className='mb-5' >Upcoming SpaceX Launches</CardTitle>
+          <FontAwesomeIcon icon={faArrowAltCircleRight} size='5x'/>
         </Card>
 
         <Card
@@ -60,9 +61,10 @@ export default function SpaceXHomePage() {
             textAlign: 'center',
             alignItems: 'center'
           }}
+          onClick={() => history.push("/")}
         >
-          <CardTitle className='mb-5' tag="h2" onClick={() => history.push("/")}>Dragon Series Information</CardTitle>
-          <FontAwesomeIcon icon={faArrowAltCircleRight} size='5x' onClick={() => history.push("/")} />
+          <CardTitle className='mb-5' tag="h2">Dragon Series Information</CardTitle>
+          <FontAwesomeIcon icon={faArrowAltCircleRight} size='5x'/>
         </Card>
       </Container>
     </div>

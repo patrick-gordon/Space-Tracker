@@ -24,12 +24,12 @@ export default function UpcomingLaunch() {
   return (
     <>
       <Container
-        style={{ padding: "5px",  color: '#AC4139' }}
+        style={{ padding: "5px",  color: '#FFF' }}
         className="mt-4"
       >
         <h1 style={{textAlign: 'center'}}>Upcoming Flights</h1>
       </Container>
-      <Container style={{ border: "1px solid white" }} className="mt-3">
+      <Container className="mt-3">
         {upcomingData.map((launch) => {
           return (
             <ListGroup>
@@ -38,8 +38,8 @@ export default function UpcomingLaunch() {
                   history.push("/launch/" + launch.id);
                 }}
               >
-                <ListGroupItem action className='mt-2' style={{backgroundColor: '#726D7A', color: '#FFF', textAlign: ''}}>
-                  Name: {launch.name} ID: {launch.id}
+                <ListGroupItem action className='mt-2' style={{backgroundColor: '#726D7A', color: '#FFF', textAlign: 'center', fontSize: '25px'}}>
+                  Name: {launch.name} 
                 </ListGroupItem>
               </a>
             </ListGroup>

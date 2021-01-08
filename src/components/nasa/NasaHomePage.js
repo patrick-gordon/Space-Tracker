@@ -10,13 +10,13 @@ export default function NasaHomePage() {
   return (
     <div>
       <Container style={{ marginTop: "4rem" }}>
-        <h1 style={{ color: "#AC4139", textAlign: "center" }}>
+        <h1 style={{ color: "#FFF", textAlign: "center" }}>
           Nasa Information
         </h1>
       </Container>
       <Container
         style={{
-          border: "1px solid white",
+          // border: "1px solid white",
           // width: "1216px",
           // height: "262px",
           display: "flex",
@@ -33,9 +33,10 @@ export default function NasaHomePage() {
             textAlign: "center",
             alignItems: 'center'
           }}
+          onClick={() => history.push("/apod")}
         >
-          <CardTitle tag="h5" onClick={() => history.push("/apod")}>APOD</CardTitle>
-          <FontAwesomeIcon icon={faArrowAltCircleRight} size='5x' onClick={() => history.push("/apod")} />
+          <CardTitle tag="h5" style={{marginTop: '1rem'}}>APOD</CardTitle>
+          <FontAwesomeIcon icon={faArrowAltCircleRight} size='5x' style={{marginTop: '2rem'}}/>
         </Card>
         {/* <Card
           inverse

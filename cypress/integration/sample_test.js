@@ -10,7 +10,7 @@ describe('GET APOD', function(){
             .should('include', '/apod')
 
         cy.get('h3')
-            .should('contain', 'Solar')
+            .should('contain', 'TITLE')
     })
 })
 
@@ -27,7 +27,7 @@ describe('GET spacex latest launch', () => {
             .should('include', '/latestlaunch')
 
         cy.get('h3')
-            .should('contain', 'Turksat')
+            .should('contain', 'NAME')
 
     })
 })
@@ -44,6 +44,12 @@ describe('GET spacex upcoming launch', () => {
 
         cy.get('h1')
             .should('contain', 'Flights')
+
+        cy.contains('Name')
+            .click()
+
+        cy.get('h3')
+            .should('contain', 'Name')
 
     })
 })

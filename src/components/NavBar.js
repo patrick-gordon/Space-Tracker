@@ -20,17 +20,17 @@ export default function NavBar() {
     <div>
       <Navbar style={{backgroundColor: '#8CA1D2', maxHeight: '10rem'}}>
         <Container>
-        <NavbarBrand href="/" className="mr-auto" style={{color: '#AC4139', fontSize: '36px'}} >
+        <NavbarBrand href="/" className="mr-auto" style={{color: '#FFFF', fontSize: '36px'}} >
           Space Tracker
         </NavbarBrand>
-        <NavbarToggler onClick={toggleNavbar} className="mr-2" style={{border: '1px solid black'}}> <FontAwesomeIcon icon={faAlignJustify} color={'#AC4139'} size='1x'/></NavbarToggler>
+        <NavbarToggler onClick={toggleNavbar} className="mr-2" style={{border: '1px solid black'}}> <FontAwesomeIcon icon={faAlignJustify} color={'#FFF'} size='1x'/></NavbarToggler>
         <Collapse isOpen={isOpen} navbar >
           <Nav navbar>
             <NavItem>
-              <NavLink href="/nasa"  style={{color: '#AC4139', fontSize: '22px'}}>Nasa</NavLink>
+              <NavLink href="/nasa"  style={{color: '#FFF', fontSize: '22px'}}>Nasa</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/spacex"  style={{color: '#AC4139', fontSize: '22px'}}>
+              <NavLink href="/spacex"  style={{color: '#FFF', fontSize: '22px'}}>
                 SpaceX
               </NavLink>
             </NavItem>
