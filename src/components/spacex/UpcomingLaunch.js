@@ -24,7 +24,7 @@ export default function UpcomingLaunch() {
   return (
     <>
       <Container
-        style={{ border: "1px solid white", padding: "5px",  color: '#AC4139' }}
+        style={{ padding: "5px",  color: '#AC4139' }}
         className="mt-4"
       >
         <h1 style={{textAlign: 'center'}}>Upcoming Flights</h1>

@@ -21,7 +21,7 @@ export default function NasaHomePage() {
           // height: "262px",
           display: "flex",
           justifyContent: "space-evenly",
-          marginTop: "10rem",
+          marginTop: "3rem",
         }}
       >
         <Card
@@ -34,10 +34,10 @@ export default function NasaHomePage() {
             alignItems: 'center'
           }}
         >
-          <CardTitle tag="h5">APOD</CardTitle>
+          <CardTitle tag="h5" onClick={() => history.push("/apod")}>APOD</CardTitle>
           <FontAwesomeIcon icon={faArrowAltCircleRight} size='5x' onClick={() => history.push("/apod")} />
         </Card>
-        <Card
+        {/* <Card
           inverse
           style={{
             backgroundColor: "#726D7A",
@@ -49,7 +49,7 @@ export default function NasaHomePage() {
         >
           <CardTitle tag="h5">APOD</CardTitle>
           <FontAwesomeIcon icon={faArrowAltCircleRight} size='5x' onClick={() => history.push("/apod")} />
-        </Card>
+        </Card> */}
       </Container>
     </div>
   );

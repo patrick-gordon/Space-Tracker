@@ -1,3 +1,4 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 import {
   Collapse,
@@ -9,6 +10,7 @@ import {
   NavLink,
   Container,
 } from "reactstrap";
+import {faAlignJustify} from '@fortawesome/free-solid-svg-icons'
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,7 +23,7 @@ export default function NavBar() {
         <NavbarBrand href="/" className="mr-auto" style={{color: '#AC4139', fontSize: '36px'}} >
           Space Tracker
         </NavbarBrand>
-        <NavbarToggler onClick={toggleNavbar} className="mr-2" style={{border: '1px solid black'}} />
+        <NavbarToggler onClick={toggleNavbar} className="mr-2" style={{border: '1px solid black'}}> <FontAwesomeIcon icon={faAlignJustify} color={'#AC4139'} size='1x'/></NavbarToggler>
         <Collapse isOpen={isOpen} navbar >
           <Nav navbar>
             <NavItem>
