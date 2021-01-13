@@ -1,7 +1,7 @@
 import React from "react";
-import { Card, CardTitle, Button, Container } from "reactstrap";
+import { Card, CardTitle, Container } from "reactstrap";
 import { useHistory } from "react-router-dom";
-import {faArrowAltCircleRight} from '@fortawesome/free-solid-svg-icons'
+import { faArrowAltCircleRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function NasaHomePage() {
@@ -10,9 +10,7 @@ export default function NasaHomePage() {
   return (
     <div>
       <Container style={{ marginTop: "4rem" }}>
-        <h1 style={{ color: "#FFF", textAlign: "center" }}>
-          Nasa Information
-        </h1>
+        <h1 style={{ color: "#FFF", textAlign: "center" }}>Nasa Information</h1>
       </Container>
       <Container
         style={{
@@ -31,12 +29,18 @@ export default function NasaHomePage() {
             width: "365px",
             height: "262px",
             textAlign: "center",
-            alignItems: 'center'
+            alignItems: "center",
           }}
           onClick={() => history.push("/apod")}
         >
-          <CardTitle tag="h5" style={{marginTop: '1rem'}}>APOD</CardTitle>
-          <FontAwesomeIcon icon={faArrowAltCircleRight} size='5x' style={{marginTop: '2rem'}}/>
+          <CardTitle tag="h5" style={{ marginTop: "1rem" }}>
+            APOD
+          </CardTitle>
+          <FontAwesomeIcon
+            icon={faArrowAltCircleRight}
+            size="5x"
+            style={{ marginTop: "2rem" }}
+          />
         </Card>
         {/* <Card
           inverse

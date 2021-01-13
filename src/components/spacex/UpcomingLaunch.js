@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Axios from "axios";
-import { ListGroup, ListGroupItem, Button, Container } from "reactstrap";
+import { ListGroup, ListGroupItem, Container } from "reactstrap";
 import { useHistory } from "react-router-dom";
 
 export default function UpcomingLaunch() {
@@ -23,25 +23,31 @@ export default function UpcomingLaunch() {
   }, []);
   return (
     <>
-      <Container
-        style={{ padding: "5px",  color: '#FFF' }}
-        className="mt-4"
-      >
-        <h1 style={{textAlign: 'center'}}>Upcoming Flights</h1>
+      <Container style={{ padding: "5px", color: "#FFF" }} className="mt-4">
+        <h1 style={{ textAlign: "center" }}>Upcoming Flights</h1>
       </Container>
       <Container className="mt-3">
         {upcomingData.map((launch) => {
           return (
             <ListGroup>
-              <a
+              <span
                 onClick={() => {
                   history.push("/launch/" + launch.id);
                 }}
               >
-                <ListGroupItem action className='mt-2' style={{backgroundColor: '#726D7A', color: '#FFF', textAlign: 'center', fontSize: '25px'}}>
-                  Name: {launch.name} 
+                <ListGroupItem
+                  action
+                  className="mt-2"
+                  style={{
+                    backgroundColor: "#726D7A",
+                    color: "#FFF",
+                    textAlign: "center",
+                    fontSize: "25px",
+                  }}
+                >
+                  Name: {launch.name}
                 </ListGroupItem>
-              </a>
+              </span>
             </ListGroup>
           );
         })}

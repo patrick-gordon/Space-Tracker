@@ -1,11 +1,5 @@
 import "./App.css";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  Redirect,
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import NasaHomePage from "./components/nasa/NasaHomePage";
 import SpaceXHomePage from "./components/spacex/SpaceXHomePage";
 import UpcomingLaunch from "./components/spacex/UpcomingLaunch";

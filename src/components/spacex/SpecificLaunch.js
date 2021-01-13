@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Axios from "axios";
 import { useParams } from "react-router-dom";
-import { Card, CardTitle, Container } from "reactstrap";
+import { Card, CardText, Container } from "reactstrap";
 
 export default function SpecificLaunch() {
   let { id } = useParams();
@@ -31,14 +31,14 @@ export default function SpecificLaunch() {
             backgroundColor: "#726D7A",
           }}
         >
-          <h3 style={{ color: "#FFF" }}>Name: {specificLaunchData.name}</h3>
-          <h3 style={{ color: "#FFF" }}>
+          <CardText tag='h3' style={{ color: "#FFF" }}>Name: {specificLaunchData.name}</CardText>
+          <CardText tag='h3' style={{ color: "#FFF" }}>
             Date: {specificLaunchData.date_local}
-          </h3>
-          <h3 style={{ color: "#FFF" }}>
+          </CardText>
+          <CardText tag='h3' style={{ color: "#FFF" }}>
             Details: {specificLaunchData.details}
-          </h3>
-          <h3 style={{ color: "#FFF" }}>{specificLaunchData.id}</h3>
+          </CardText>
+          <CardText tag='h3' style={{ color: "#FFF" }}>{specificLaunchData.id}</CardText>
         </Card>
       </Container>
     </div>

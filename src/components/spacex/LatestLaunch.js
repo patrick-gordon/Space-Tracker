@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Axios from "axios";
-import ReactPlayer from "react-player";
-import { Card, CardTitle, Container } from "reactstrap";
+import { Container, CardText } from "reactstrap";
 
 export default function LatestLaunch() {
   const [spaceXData, setSpaceXData] = useState([]);
@@ -31,10 +30,9 @@ export default function LatestLaunch() {
           marginTop: "5rem",
         }}
       >
-        <h3 style={{ color: "#FFF" }}>NAME: {spaceXData.name}</h3>
-        <h3 style={{ color: "#FFF" }}>DATE: {spaceXData.date_local}</h3>
-        {/* <ReactPlayer url={spaceXData.links.webcast} /> */}
-        <h3 style={{ color: "#FFF" }}>DETAILS: {spaceXData.details}</h3>
+        <CardText tag='h3' style={{ color: "#FFF" }}>NAME: {spaceXData.name}</CardText>
+        <CardText tag='h3' style={{ color: "#FFF" }}>DATE: {spaceXData.date_local}</CardText>
+        <CardText tag='h3' style={{ color: "#FFF" }}>DETAILS: {spaceXData.details}</CardText>
       </Container>
     </div>
   );

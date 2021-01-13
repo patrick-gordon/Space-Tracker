@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Axios from "axios";
-import { Card, CardTitle, Container } from "reactstrap";
+import { Card, CardText, Container } from "reactstrap";
 
 export default function ApodPage() {
   const [nasaData, setNasaData] = useState([]);
@@ -24,14 +24,14 @@ export default function ApodPage() {
   return (
     <div>
       <div>
-        <Container style={{ marginTop: "4rem"}}>
+        <Container style={{ marginTop: "4rem" }}>
           <Card style={{ backgroundColor: "#726D7A" }}>
-            <h3 style={{ color: "#FFF" }}>TITLE: {nasaData.title}</h3>
-            <h3 style={{ color: "#FFF" }}>DATE:{nasaData.date}</h3>
+            <CardText tag='h3' style={{ color: "#FFF" }}>TITLE: {nasaData.title}</CardText>
+            <CardText tag='h3' style={{ color: "#FFF" }}>DATE: {nasaData.date}</CardText>
             <img src={nasaData.hdurl} alt={nasaData.title} width={"900px"} />
-            <h3 style={{ color: "#FFF" }}>
+            <CardText tag='h3' style={{ color: "#FFF" }}>
               DESCRIPTION:{nasaData.explanation}
-            </h3>
+            </CardText>
           </Card>
         </Container>
       </div>
