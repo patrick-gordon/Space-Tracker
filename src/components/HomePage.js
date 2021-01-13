@@ -8,20 +8,18 @@ import {
 } from "reactstrap";
 import { useHistory } from "react-router-dom";
 
-
 export default function HomePage() {
-
-  const history = useHistory()
+  const history = useHistory();
   return (
-    <Container>
-      <Card onClick={() => history.push("/nasa")}>
-        <CardImg src="/Logos/Nasa_worm_logo.png" alt="Nasa Logo" />
+    <Container style={{ marginTop: "4rem" }}>
+      <Card style={{ backgroundColor: '#726D7A'}} onClick={() => history.push("/nasa")}>
+        <CardImg src="/assets/wormLogo.png" alt="Nasa Logo" />
         <CardImgOverlay></CardImgOverlay>
         <CardTitle></CardTitle>
       </Card>
 
-      <Card onClick={() => history.push("/spacex")}>
-        <CardImg width="100%" src="/Logos/worm.jpg" alt="SpaceX Logo" />
+      <Card style={{ backgroundColor: '#726D7A'}} onClick={() => history.push("/spacex")}>
+        <CardImg width="100%" src="" alt="SpaceX Logo" />
         <CardImgOverlay></CardImgOverlay>
         <CardTitle></CardTitle>
       </Card>
