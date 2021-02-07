@@ -8,24 +8,26 @@ export default function NasaHomePage() {
   const history = useHistory();
 
   return (
-    <div>
-      <Container style={{ marginTop: "4rem" }}>
-        <h1 style={{ color: "#FFF", textAlign: "center" }}>Nasa Information</h1>
-      </Container>
+    <div
+      style={{
+        border: "1px solid white",
+        display: "flex",
+      }}
+    >
       <Container
         style={{
-          // border: "1px solid white",
+          border: "1px solid white",
           // width: "1216px",
-          // height: "262px",
+          height: "100%",
           display: "flex",
-          justifyContent: "space-evenly",
-          marginTop: "3rem",
+          flexWrap: "wrap",
+          justifyContent: "space-around",
         }}
       >
         <Card
           inverse
           style={{
-            backgroundColor: "#726D7A",
+            backgroundColor: "#343435",
             width: "365px",
             height: "262px",
             textAlign: "center",
@@ -55,6 +57,20 @@ export default function NasaHomePage() {
           <CardTitle tag="h5">APOD</CardTitle>
           <FontAwesomeIcon icon={faArrowAltCircleRight} size='5x' onClick={() => history.push("/apod")} />
         </Card> */}
+      </Container>
+
+      <Container
+        style={{
+          width: "400px",
+          border: "1px solid white",
+        }}
+      >
+        <a
+          class="twitter-timeline"
+          href="https://twitter.com/nasa?ref_src=twsrc%5Etfw"
+        >
+          Tweets by elonmusk
+        </a>
       </Container>
     </div>
   );

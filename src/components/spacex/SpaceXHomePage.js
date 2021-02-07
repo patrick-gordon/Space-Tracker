@@ -8,30 +8,28 @@ export default function SpaceXHomePage() {
   const history = useHistory();
 
   return (
-    <div>
-      <Container style={{ marginTop: "4rem" }}>
-        <h1 style={{ color: "#FFF", textAlign: "center" }}>
-          SpaceX Information
-        </h1>
-      </Container>
+    <div style={{border: '3px solid black', display: 'flex'}}>
+      {/* <Container style={{ marginTop: "4rem" }}>
+      </Container> */}
       <Container
         style={{
           // border: "1px solid white",
           // width: "1216px",
-          // height: "262px",
+          height: "100%",
           display: "flex",
-          justifyContent: "space-evenly",
-          marginTop: "3rem",
+          flexWrap: "wrap",
+          justifyContent: "space-around",
         }}
-      >
+      > 
         <Card
           inverse
           style={{
-            backgroundColor: "#726D7A",
-            width: "365px",
-            height: "262px",
+            backgroundColor: "#343435",
+            width: "20.5rem",
+            height: "15rem",
             textAlign: "center",
             alignItems: "center",
+            marginTop: '2rem'
           }}
           onClick={() => history.push("/latestlaunch")}
         >
@@ -44,11 +42,12 @@ export default function SpaceXHomePage() {
         <Card
           inverse
           style={{
-            backgroundColor: "#726D7A",
-            width: "365px",
-            height: "262px",
+            backgroundColor: "#343435",
+            width: "20.5rem",
+            height: "15rem",
             textAlign: "center",
             alignItems: "center",
+            marginTop: '2rem'
           }}
           onClick={() => history.push("/upcominglaunch")}
         >
@@ -61,11 +60,12 @@ export default function SpaceXHomePage() {
         <Card
           inverse
           style={{
-            backgroundColor: "#726D7A",
-            width: "365px",
-            height: "262px",
+            backgroundColor: "#343435",
+            width: "20.5rem",
+            height: "15rem",
             textAlign: "center",
             alignItems: "center",
+            marginTop: '2rem'
           }}
           onClick={() => history.push("/")}
         >
@@ -74,6 +74,91 @@ export default function SpaceXHomePage() {
           </CardTitle>
           <FontAwesomeIcon icon={faArrowAltCircleRight} size="5x" />
         </Card>
+
+        <Card
+          inverse
+          style={{
+            backgroundColor: "#343435",
+            width: "20.5rem",
+            height: "15rem",
+            textAlign: "center",
+            alignItems: "center",
+            marginTop: '2rem'
+
+          }}
+          onClick={() => history.push("/rockets")}
+        >
+          <CardTitle className="mb-5" tag="h2">
+            SpaceX Rockets
+          </CardTitle>
+          <FontAwesomeIcon icon={faArrowAltCircleRight} size="5x" />
+        </Card>
+
+        <Card
+          inverse
+          style={{
+            backgroundColor: "#343435",
+            width: "20.5rem",
+            height: "15rem",
+            textAlign: "center",
+            alignItems: "center",
+            marginTop: '2rem'
+
+          }}
+          onClick={() => history.push("/capsules")}
+        >
+          <CardTitle className="mb-5" tag="h2">
+            SpaceX Capsules
+          </CardTitle>
+          <FontAwesomeIcon icon={faArrowAltCircleRight} size="5x" />
+        </Card>
+
+        
+        <Card
+          inverse
+          style={{
+            backgroundColor: "#343435",
+            width: "20.5rem",
+            height: "15rem",
+            textAlign: "center",
+            alignItems: "center",
+            marginTop: '2rem'
+
+          }}
+          onClick={() => history.push("/payloads")}
+        >
+          <CardTitle className="mb-5" tag="h2">
+            SpaceX Payloads
+          </CardTitle>
+          <FontAwesomeIcon icon={faArrowAltCircleRight} size="5x" />
+        </Card>
+
+        <Card
+          inverse
+          style={{
+            backgroundColor: "#343435",
+            width: "20.5rem",
+            height: "15rem",
+            textAlign: "center",
+            alignItems: "center",
+            marginTop: '2rem'
+          }}
+          onClick={() => history.push("/")}
+        >
+          <CardTitle className="mb-5" tag="h2">
+            Starship Updates and News
+          </CardTitle>
+          <FontAwesomeIcon icon={faArrowAltCircleRight} size="5x" />
+        </Card> 
+      </Container>
+      <Container 
+        style={{
+          width: '400px',
+          // border: "1px solid white",
+          marginTop: '2rem'
+        }}
+      >
+        <a class="twitter-timeline" href="https://twitter.com/spacex?ref_src=twsrc%5Etfw">Tweets by elonmusk</a> 
       </Container>
     </div>
   );

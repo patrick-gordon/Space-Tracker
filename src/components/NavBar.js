@@ -11,15 +11,16 @@ import {
   Container,
 } from "reactstrap";
 import { faAlignJustify } from "@fortawesome/free-solid-svg-icons";
+import { faRocket } from "@fortawesome/free-solid-svg-icons";
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
   const toggleNavbar = () => setIsOpen(!isOpen);
 
   return (
-    <div>
-      <Navbar style={{ backgroundColor: "#8CA1D2", maxHeight: "10rem" }}>
         <Container>
+          <Navbar style={{ backgroundColor: "#00000", maxHeight: "10rem" }}>
+          <FontAwesomeIcon icon={faRocket} size="2x" className='mr-3'></FontAwesomeIcon>
           <NavbarBrand
             href="/"
             className="mr-auto"
@@ -41,6 +42,7 @@ export default function NavBar() {
                 <NavLink
                   href="/nasa"
                   style={{ color: "#FFF", fontSize: "22px" }}
+                  className='ml-5'
                 >
                   Nasa
                 </NavLink>
@@ -49,14 +51,15 @@ export default function NavBar() {
                 <NavLink
                   href="/spacex"
                   style={{ color: "#FFF", fontSize: "22px" }}
+                  className='ml-5'
                 >
                   SpaceX
                 </NavLink>
               </NavItem>
             </Nav>
           </Collapse>
-        </Container>
       </Navbar>
-    </div>
+        </Container>
+    
   );
 }

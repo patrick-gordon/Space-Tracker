@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from "react";
 import Axios from "axios";
-import { ListGroup, ListGroupItem, Container } from "reactstrap";
+import { Container, ListGroup, ListGroupItem } from "reactstrap";
 import { useHistory } from "react-router-dom";
 
-export default function UpcomingLaunch() {
+export default function Capsules() {
   const history = useHistory();
-  const [upcomingData, setUpcomingData] = useState([]);
+  const [capsules, setCapsules] = useState([]);
 
   const fetchData = () => {
-    Axios.get("https://api.spacexdata.com/v4/launches/upcoming")
+    Axios.get("https://api.spacexdata.com/v4/capsules")
       .then((res) => {
+        setCapsules(res.data);
         console.log(res.data);
-        setUpcomingData(res.data);
       })
       .catch((err) => {
         console.log(err);
@@ -22,17 +22,17 @@ export default function UpcomingLaunch() {
     fetchData();
   }, []);
   return (
-    <>
+    <div>
       <Container style={{ padding: "5px", color: "#FFF" }} className="mt-4">
-        <h1 style={{ textAlign: "center" }}>Upcoming Flights</h1>
+        <h1 style={{ textAlign: "center" }}>Capsules</h1>
       </Container>
       <Container className="mt-3">
-        {upcomingData.map((launch) => {
+        {capsules.map((capsule) => {
           return (
             <ListGroup>
               <span
                 onClick={() => {
-                  history.push("/launch/" + launch.id);
+                  history.push("/capsules/" + capsule.id);
                 }}
               >
                 <ListGroupItem
@@ -45,13 +45,13 @@ export default function UpcomingLaunch() {
                     fontSize: "25px",
                   }}
                 >
-                  Name: {launch.name}
+                  Serial Number: {capsule.serial}
                 </ListGroupItem>
               </span>
             </ListGroup>
           );
         })}
       </Container>
-    </>
+    </div>
   );
 }

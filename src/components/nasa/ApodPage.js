@@ -25,7 +25,7 @@ export default function ApodPage() {
     <div>
       <div>
         <Container style={{ marginTop: "4rem" }}>
-          <Card style={{ backgroundColor: "#726D7A" }}>
+          <Card style={{ backgroundColor: "#343435" }}>
             <CardText tag='h3' style={{ color: "#FFF" }}>TITLE: {nasaData.title}</CardText>
             <CardText tag='h3' style={{ color: "#FFF" }}>DATE: {nasaData.date}</CardText>
             <img src={nasaData.hdurl} alt={nasaData.title} width={"900px"} />

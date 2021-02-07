@@ -28,7 +28,7 @@ export default function SpecificLaunch() {
       >
         <Card
           style={{
-            backgroundColor: "#726D7A",
+            backgroundColor: "#343435",
           }}
         >
           <CardText tag='h3' style={{ color: "#FFF" }}>Name: {specificLaunchData.name}</CardText>

@@ -40,18 +40,50 @@ describe("GET spacex upcoming launch", () => {
   });
 });
 
-// describe('GET spacex latest launch', () => {
-//     it('Naviagtes SPACEX homepage into latest launch page', () => {
-//         cy.visit('/spacex')
+describe('GET spacex  rockets', () => {
+    it('Naviagtes SPACEX homepage into spacex rocket page', () => {
+        cy.visit('/spacex')
 
-//         cy.contains('Latest')
-//             .click()
+        cy.contains('Rockets')
+            .click()
 
-//         cy.url()
-//             .should('include', '/latestlaunch')
+        cy.url()
+            .should('include', '/rockets')
 
-//         cy.get('h3')
-//             .should('contain', 'Turksat')
+        cy.get('h1')
+            .should('contain', 'Rockets')
 
-//     })
-// })
+    })
+})
+
+describe('GET spacex  capsules', () => {
+  it('Naviagtes SPACEX homepage into spacex capsules page', () => {
+      cy.visit('/spacex')
+
+      cy.contains('Capsules')
+          .click()
+
+      cy.url()
+          .should('include', '/capsules')
+
+      cy.get('h1')
+          .should('contain', 'Capsules')
+
+  })
+})
+
+describe('GET spacex  payloads', () => {
+  it('Naviagtes SPACEX homepage into spacex payloads page', () => {
+      cy.visit('/spacex')
+
+      cy.contains('Payloads')
+          .click()
+
+      cy.url()
+          .should('include', '/payloads')
+
+      cy.get('h1')
+          .should('contain', 'Payloads')
+
+  })
+})

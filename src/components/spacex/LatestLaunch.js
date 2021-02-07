@@ -9,6 +9,7 @@ export default function LatestLaunch() {
     Axios.get("https://api.spacexdata.com/v4/launches/latest")
       .then((res) => {
         setSpaceXData(res.data);
+        console.log(res.data)
       })
       .catch((err) => {
         console.log(err);
@@ -22,7 +23,7 @@ export default function LatestLaunch() {
     <div>
       <Container
         style={{
-          backgroundColor: "#726D7A",
+          backgroundColor: "#343435",
           // width: "365px",
           // height: "262px",
           // textAlign: 'center',
