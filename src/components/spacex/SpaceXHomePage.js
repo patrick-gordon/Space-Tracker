@@ -8,7 +8,7 @@ export default function SpaceXHomePage() {
   const history = useHistory();
 
   return (
-    <div style={{border: '3px solid black', display: 'flex'}}>
+    <div style={{ display: 'flex', marginTop: '2rem'}}>
       {/* <Container style={{ marginTop: "4rem" }}>
       </Container> */}
       <Container
@@ -158,7 +158,13 @@ export default function SpaceXHomePage() {
           marginTop: '2rem'
         }}
       >
-        <a class="twitter-timeline" href="https://twitter.com/spacex?ref_src=twsrc%5Etfw">Tweets by elonmusk</a> 
+        <a class="twitter-timeline"
+         href="https://twitter.com/spacex?ref_src=twsrc%5Etfw"
+         data-height="600"
+         data-chrome='transparent'
+         data-border-color='#FFFF'
+         data-theme='dark'
+         >Tweets by elonmusk</a> 
       </Container>
     </div>
   );

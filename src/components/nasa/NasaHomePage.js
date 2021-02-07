@@ -10,13 +10,14 @@ export default function NasaHomePage() {
   return (
     <div
       style={{
-        border: "1px solid white",
+        // border: "1px solid white",
         display: "flex",
+        marginTop: '2rem'
       }}
     >
       <Container
         style={{
-          border: "1px solid white",
+          // border: "1px solid white",
           // width: "1216px",
           height: "100%",
           display: "flex",
@@ -28,10 +29,11 @@ export default function NasaHomePage() {
           inverse
           style={{
             backgroundColor: "#343435",
-            width: "365px",
-            height: "262px",
+            width: "20.5rem",
+            height: "15rem",
             textAlign: "center",
             alignItems: "center",
+            marginTop: '2rem'
           }}
           onClick={() => history.push("/apod")}
         >
@@ -62,14 +64,19 @@ export default function NasaHomePage() {
       <Container
         style={{
           width: "400px",
-          border: "1px solid white",
+          // border: "1px solid white",
+          marginTop: '2rem'
         }}
       >
         <a
           class="twitter-timeline"
           href="https://twitter.com/nasa?ref_src=twsrc%5Etfw"
+          data-height="600"
+          data-chrome='transparent'
+          data-border-color='#FFFF'
+          data-theme='dark'
         >
-          Tweets by elonmusk
+          Tweets by Nasa
         </a>
       </Container>
     </div>
