@@ -14,8 +14,8 @@ export default function HomePage() {
           }}
         ></hr>
 
-        <Container
-          style={{ marginTop: "4rem", display: "flex", height: "100%" }}
+        <Container className='homepage-wrapper-container'
+          style={{ }}
         >
           <Container
           className='homepage-words-container'
