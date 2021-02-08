@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Axios from "axios";
 import { Container, ListGroup, ListGroupItem } from "reactstrap";
 import { useHistory } from "react-router-dom";
+import "./Capsules.css";
 
 export default function Capsules() {
   const history = useHistory();
@@ -23,7 +24,7 @@ export default function Capsules() {
   }, []);
   return (
     <div>
-      <Container style={{ padding: "5px", color: "#FFF" }} className="mt-4">
+      <Container className="spacex-capsules-container">
         <h1 style={{ textAlign: "center" }}>Capsules</h1>
       </Container>
       <Container className="mt-3">
@@ -35,16 +36,7 @@ export default function Capsules() {
                   history.push("/capsules/" + capsule.id);
                 }}
               >
-                <ListGroupItem
-                  action
-                  className="mt-2"
-                  style={{
-                    backgroundColor: "#343435",
-                    color: "#FFF",
-                    textAlign: "center",
-                    fontSize: "25px",
-                  }}
-                >
+                <ListGroupItem action className="spacex-capsules-list">
                   Serial Number: {capsule.serial}
                 </ListGroupItem>
               </span>

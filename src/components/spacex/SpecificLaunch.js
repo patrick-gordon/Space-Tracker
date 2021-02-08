@@ -21,10 +21,7 @@ export default function SpecificLaunch() {
 
   return (
     <div>
-      <Container
-        style={{
-          marginTop: "4rem",
-        }}
+      <Container className='mt-4'
       >
         <Card
           style={{

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Axios from "axios";
 import { ListGroup, ListGroupItem, Container } from "reactstrap";
 import { useHistory } from "react-router-dom";
+import "./UpcomingLaunch.css";
 
 export default function UpcomingLaunch() {
   const history = useHistory();
@@ -23,7 +24,7 @@ export default function UpcomingLaunch() {
   }, []);
   return (
     <>
-      <Container style={{ padding: "5px", color: "#FFF" }} className="mt-4">
+      <Container className="spacex-upcominglaunch-container">
         <h1 style={{ textAlign: "center" }}>Upcoming Flights</h1>
       </Container>
       <Container className="mt-3">
@@ -35,16 +36,7 @@ export default function UpcomingLaunch() {
                   history.push("/launch/" + launch.id);
                 }}
               >
-                <ListGroupItem
-                  action
-                  className="mt-2"
-                  style={{
-                    backgroundColor: "#343435",
-                    color: "#FFF",
-                    textAlign: "center",
-                    fontSize: "25px",
-                  }}
-                >
+                <ListGroupItem action className="spacex-launchname-list">
                   Name: {launch.name}
                 </ListGroupItem>
               </span>

@@ -1,0 +1,13 @@
+.spacex-upcominglaunch-container {
+  padding: 5px;
+  color: #ffff;
+  margin-top: 40px;
+}
+
+.spacex-launchname-list {
+  background-color: #343435;
+  color: #fff;
+  text-align: center;
+  font-size: 25px;
+  margin-top: 10px;
+}

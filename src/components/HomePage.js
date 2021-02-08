@@ -18,14 +18,7 @@ export default function HomePage() {
           style={{ marginTop: "4rem", display: "flex", height: "100%" }}
         >
           <Container
-            style={{
-              color: "white",
-              textAlign: "center",
-              alignItems: "center",
-              width: "100%",
-              height: "100%",
-              marginTop: "7rem",
-            }}
+          className='homepage-words-container'
           >
             <h1>Your home for all space</h1>
           </Container>
@@ -80,35 +73,20 @@ export default function HomePage() {
         ></hr>
       </div>
 
-      <Container style={{ marginTop: "2rem" }}>
+      <Container className='homepage-btn-container'>
         <ButtonToolbar>
           <Button
             role="group"
             aria-pressed="true"
             className="spacex-button"
             onClick={() => history.push("/spacex")}
-            style={{
-              border: "1px solid white",
-              // backgroundColor: "black",
-              height: "16rem",
-              width: "20rem",
-              // marginRight: '6rem',
-              marginLeft: "6.5rem",
-            }}
           >
             Explore SpaceX
           </Button>
           <Button
             role="group"
             className="nasa-button"
-            onClick={() => history.push("/nasa")}
-            style={{
-              border: "1px solid white",
-              // backgroundColor: "black",
-              height: "16rem",
-              width: "20rem",
-              marginLeft: "6.5rem",
-            }}
+            onClick={() => history.push("/nasa")}           
           >
             Explore Nasa
           </Button>

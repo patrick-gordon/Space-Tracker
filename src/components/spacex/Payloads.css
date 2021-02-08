@@ -1,0 +1,13 @@
+.spacex-payloads-container {
+  padding: 5px;
+  color: #fff;
+  margin-top: 4rem;
+}
+
+.spacex-payloads-list {
+  background-color: #343435;
+  color: #fff;
+  text-align: center;
+  font-size: 25px;
+  margin-top: 2rem;
+}
