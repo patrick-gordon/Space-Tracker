@@ -1,0 +1,30 @@
+.main-navbar{
+    background-color: #000;
+    max-height: 10rem;
+}
+
+.main-navbar-brand{
+    color: #FFFF;
+    font-size: 36px;
+    margin-right: auto;
+}
+@media (max-width: 450px){
+    .main-navbar-brand{
+        font-size: 28px;
+    }
+}
+.main-navbar-brand a:hover{
+    color: #FFF;
+}
+
+.main-navbar-sublink-nasa{
+    color: #FFF;
+    font-size: 22px;
+    margin-left: 3rem;
+}
+
+.main-navbar-sublink-spacex{
+    color: #FFF;
+    font-size: 22px;
+    margin-left: 3rem;
+}
