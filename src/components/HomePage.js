@@ -14,9 +14,7 @@ export default function HomePage() {
           }}
         ></hr>
 
-        <Container className='homepage-wrapper-container'
-          style={{ }}
-        >
+        <Container className='homepage-wrapper-container'>
           <Container
           className='homepage-words-container'
           >
@@ -77,7 +75,6 @@ export default function HomePage() {
         <ButtonToolbar>
           <Button
             role="group"
-            aria-pressed="true"
             className="spacex-button"
             onClick={() => history.push("/spacex")}
           >

@@ -1,8 +1,9 @@
+
 import React, { useEffect, useState } from "react";
 import Axios from "axios";
 import { Container, ListGroup, ListGroupItem } from "reactstrap";
 import { useHistory } from "react-router-dom";
-import './Rockets.css'
+import "./Rockets.css";
 
 export default function Rockets() {
   const history = useHistory();
@@ -24,7 +25,7 @@ export default function Rockets() {
   }, []);
   return (
     <div>
-      <Container className='spacex-rockets-container'>
+      <Container className="spacex-rockets-container">
         <h1 style={{ textAlign: "center" }}>Rockets</h1>
       </Container>
       <Container className="mt-3">
@@ -34,13 +35,11 @@ export default function Rockets() {
               <span
                 onClick={() => {
                   history.push("/rockets/" + rocket.id);
+                  console.log('Button Pressed')
                 }}
               >
-                <ListGroupItem
-                  action
-                  className='spacex-rockets-list'
-                >
-                  Name: {rocket.name}
+                <ListGroupItem action className="spacex-rockets-list">
+                  Name: {rocket.name} {rocket.id}
                 </ListGroupItem>
               </span>
             </ListGroup>

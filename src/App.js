@@ -5,6 +5,7 @@ import SpaceXHomePage from "./components/spacex/SpaceXHomePage";
 import UpcomingLaunch from "./components/spacex/UpcomingLaunch";
 import SpecificLaunch from "./components/spacex/SpecificLaunch";
 import Rockets from './components/spacex/Rockets';
+import SpecificRocket from './components/spacex/SpecificRocket';
 import Capsules from './components/spacex/Capsules';
 import Payloads from './components/spacex/Payloads';
 import NavBar from "./components/NavBar";
@@ -33,6 +34,7 @@ function App() {
           <Route path="/upcominglaunch" component={UpcomingLaunch}></Route>
           <Route path="/launch/:id" component={SpecificLaunch}></Route>
           <Route path="/rockets" component={Rockets}></Route>
+          {/* <Route path='/rockets/:id' component={SpecificRocket}></Route> */}
           <Route path="/payloads" component={Payloads}></Route>
           <Route path="/capsules" component={Capsules}></Route>
           <Route path='/starship' component={Starship}></Route>

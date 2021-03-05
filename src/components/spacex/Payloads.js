@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Axios from "axios";
-import { Container, CardText, ListGroup, ListGroupItem } from "reactstrap";
+import { Container, ListGroup, ListGroupItem } from "reactstrap";
 import { useHistory } from "react-router-dom";
 import "./Payloads.css";
 
