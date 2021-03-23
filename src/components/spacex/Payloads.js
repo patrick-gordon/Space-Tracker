@@ -3,6 +3,8 @@ import Axios from "axios";
 import { Container, ListGroup, ListGroupItem } from "reactstrap";
 import { useHistory } from "react-router-dom";
 import "./Payloads.css";
+import SpecificPayload from './SpecficPayload'
+import {Link} from 'react-router-dom'
 
 export default function Payloads() {
   const history = useHistory();
@@ -12,7 +14,7 @@ export default function Payloads() {
     Axios.get("https://api.spacexdata.com/v4/payloads")
       .then((res) => {
         setPayloads(res.data);
-        console.log(res.data);
+        // console.log(res.data);
       })
       .catch((err) => {
         console.log(err);
@@ -31,11 +33,13 @@ export default function Payloads() {
         {payloads.map((payload) => {
           return (
             <ListGroup>
+              {/* <Link to={{pathname: '/payloads/:id', state: payload.id}} /> */}
               <span
                 onClick={() => {
-                  history.push("/payload/" + payload.id);
-                }}
-              >
+                  // console.log('clicked', payload.id)
+                  history.push("/payloads/" + payload.id);
+          }}
+          >
                 <ListGroupItem action className="spacex-payloads-list">
                   Name: {payload.name}
                 </ListGroupItem>

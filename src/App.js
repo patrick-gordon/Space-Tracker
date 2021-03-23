@@ -8,6 +8,7 @@ import Rockets from './components/spacex/Rockets';
 import SpecificRocket from './components/spacex/SpecificRocket';
 import Capsules from './components/spacex/Capsules';
 import Payloads from './components/spacex/Payloads';
+import SpecificPayload from './components/spacex/SpecficPayload'
 import NavBar from "./components/NavBar";
 import ApodPage from "./components/nasa/ApodPage";
 import LatestLaunch from "./components/spacex/LatestLaunch";
@@ -34,8 +35,10 @@ function App() {
           <Route path="/upcominglaunch" component={UpcomingLaunch}></Route>
           <Route path="/launch/:id" component={SpecificLaunch}></Route>
           <Route path="/rockets" component={Rockets}></Route>
-          {/* <Route path='/rockets/:id' component={SpecificRocket}></Route> */}
+          <Route path="/rockets/:id"component={SpecificRocket}></Route>
           <Route path="/payloads" component={Payloads}></Route>
+          <Route path="/payloads/:id" component={SpecificPayload}></Route>
+
           <Route path="/capsules" component={Capsules}></Route>
           <Route path='/starship' component={Starship}></Route>
         </Switch>

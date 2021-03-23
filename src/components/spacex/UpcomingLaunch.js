@@ -11,7 +11,7 @@ export default function UpcomingLaunch() {
   const fetchData = () => {
     Axios.get("https://api.spacexdata.com/v4/launches/upcoming")
       .then((res) => {
-        console.log(res.data);
+        // console.log(res.data);
         setUpcomingData(res.data);
       })
       .catch((err) => {
