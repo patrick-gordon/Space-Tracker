@@ -33,7 +33,7 @@ export default function Capsules() {
             <ListGroup>
               <span
                 onClick={() => {
-                  history.push("/capsules/" + capsule.id);
+                  history.push("/capsules/" + capsule.serial);
                 }}
               >
                 <ListGroupItem action className="spacex-capsules-list">

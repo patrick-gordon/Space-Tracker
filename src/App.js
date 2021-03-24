@@ -36,10 +36,12 @@ function App() {
           <Route path="/launch/:id" component={SpecificLaunch}></Route>
           <Route exact path="/rockets" component={Rockets}></Route>
           <Route path='/rockets/:id' component={SpecificRocket}></Route>
-          <Route path="/payloads" component={Payloads}></Route>
+          <Route exact path="/payloads" component={Payloads}></Route>
           <Route path="/payloads/:id" component={SpecificPayload}></Route>
 
-          <Route path="/capsules" component={Capsules}></Route>
+          <Route exact path="/capsules" component={Capsules}></Route>
+          <Route path="/capsules/:id" component={SpecificPayload}></Route>
+
           <Route path='/starship' component={Starship}></Route>
         </Switch>
         {/* </Container> */}

@@ -3,21 +3,21 @@ import Axios from "axios";
 import { useParams } from "react-router-dom";
 import { Card, CardText, Container } from "reactstrap";
 
-export default function SpecificPayload() {
-  let { id } = useParams();
-  const [specificPayloadData, setSpecificPayloadData] = useState([]);
+export default function SpecificCapsule() {
+  let { capsule_serial } = useParams();
+  const [specificCapsuleData, setSpecificCapsuleData] = useState([]);
 
   // NEEDS TO RUN AFTER BUTTON IS CLICKED FOR SPECIFIC LAUNCH
   useEffect(() => {
-    Axios.get(`https://api.spacexdata.com/v4/payloads/${id}`)
+    Axios.get(`https://api.spacexdata.com/v4/capsules/${capsule_serial}`)
       .then((res) => {
         console.log(res.data);
-        setSpecificPayloadData(res.data);
+        setSpecificCapsuleData(res.data);
       })
       .catch((err) => {
         console.log(err);
       });
-  }, [id]);
+  }, [capsule_serial]);
 
   return (
     <div>
@@ -28,14 +28,14 @@ export default function SpecificPayload() {
             backgroundColor: "#343435",
           }}
         >
-          <CardText tag='h3' style={{ color: "#FFF" }}>Name: {specificPayloadData.name}</CardText>
+          <CardText tag='h3' style={{ color: "#FFF" }}>Name: {specificCapsuleData.capsule_serial}</CardText>
           <CardText tag='h3' style={{ color: "#FFF" }}>
-            Date: {specificPayloadData.date_local}
+            Status: {specificCapsuleData.status}
           </CardText>
           <CardText tag='h3' style={{ color: "#FFF" }}>
-            Details: {specificPayloadData.details}
+            Details: {specificCapsuleData.details}
           </CardText>
-          <CardText tag='h3' style={{ color: "#FFF" }}>{specificPayloadData.id}</CardText>
+          <CardText tag='h3' style={{ color: "#FFF" }}>Reuse Count:{specificCapsuleData.reuse_count}</CardText>
         </Card>
       </Container>
     </div>
