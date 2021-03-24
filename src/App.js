@@ -33,8 +33,8 @@ function App() {
           <Route path="/latestlaunch" component={LatestLaunch}></Route>
           <Route path="/upcominglaunch" component={UpcomingLaunch}></Route>
           <Route path="/launch/:id" component={SpecificLaunch}></Route>
-          <Route path="/rockets" component={Rockets}></Route>
-          {/* <Route path='/rockets/:id' component={SpecificRocket}></Route> */}
+          <Route exact path="/rockets" component={Rockets}></Route>
+          <Route path='/rockets/:id' component={SpecificRocket}></Route>
           <Route path="/payloads" component={Payloads}></Route>
           <Route path="/capsules" component={Capsules}></Route>
           <Route path='/starship' component={Starship}></Route>
