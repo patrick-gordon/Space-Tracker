@@ -92,14 +92,14 @@ export default function SpaceXHomePage() {
       </Container>
       <Container className="twitter-container">
         <a
-          class="twitter-timeline"
+          className="twitter-timeline"
           href="https://twitter.com/spacex?ref_src=twsrc%5Etfw"
           data-height="600"
           data-chrome="transparent"
           data-border-color="#FFFF"
           data-theme="dark"
         >
-          Tweets by elonmusk
+          Tweets by Elon Musk
         </a>
       </Container>
     </div>

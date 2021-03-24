@@ -21,30 +21,30 @@ export default function SpecificRocket() {
 
   return (
     <div>
-      <Container className='mt-4'
-      >
+      <Container className="mt-4">
         <Card
           style={{
             backgroundColor: "#343435",
           }}
         >
-          <CardText tag='h3' style={{ color: "#FFF" }}>Name: {specificRocketData.name}</CardText>
-          <CardText tag='h3' style={{ color: "#FFF" }}>
+          <CardText tag="h3" style={{ color: "#FFF" }}>
+            Name: {specificRocketData.name}
+          </CardText>
+          <CardText tag="h3" style={{ color: "#FFF" }}>
             Date: {specificRocketData.description}
           </CardText>
-          <CardText tag='h3' style={{ color: "#FFF" }}>
-            Details: {specificRocketData.success_rate_pct}
+          <CardText tag="h3" style={{ color: "#FFF" }}>
+            Success Rate: {specificRocketData.success_rate_pct}%
           </CardText>
-          <CardText tag='h3' style={{ color: "#FFF" }}>
-            Details: {specificRocketData.active}
+          <CardText tag="h3" style={{ color: "#FFF" }}>
+            Active: {specificRocketData.active}
           </CardText>
-          <CardText tag='h3' style={{ color: "#FFF" }}>
-            Details: {specificRocketData.cost_per_launch}
+          <CardText tag="h3" style={{ color: "#FFF" }}>
+            Cost Per Launch: {specificRocketData.cost_per_launch}
           </CardText>
-          <CardText tag='h3' style={{ color: "#FFF" }}>
-            Details: {specificRocketData.first_flight}
+          <CardText tag="h3" style={{ color: "#FFF" }}>
+            First Flight: {specificRocketData.first_flight}
           </CardText>
-          <CardText tag='h3' style={{ color: "#FFF" }}>{specificRocketData.id}</CardText>
         </Card>
       </Container>
     </div>
