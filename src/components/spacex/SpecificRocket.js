@@ -3,7 +3,7 @@ import Axios from "axios";
 import { useParams } from "react-router-dom";
 import { Card, CardText, Container } from "reactstrap";
 
-export default function SpecificLaunch() {
+export default function SpecificRocket() {
   let { id } = useParams();
   const [specificRocketData, setSpecificRocketData] = useState([]);
 
