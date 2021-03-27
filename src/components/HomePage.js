@@ -14,41 +14,39 @@ export default function HomePage() {
           }}
         ></hr>
 
-        <Container className='homepage-wrapper-container'>
-          <Container
-          className='homepage-words-container'
-          >
+        <Container className="homepage-wrapper-container">
+          <Container className="homepage-words-container">
             <h1>Your home for all space</h1>
           </Container>
           <Container>
-            <section class="space">
-              <div class="stars">
-                <div class="stars-back"></div>
-                <div class="stars-middle"></div>
-                <div class="stars-front"></div>
+            <section className="space">
+              <div className="stars">
+                <div className="stars-back"></div>
+                <div className="stars-middle"></div>
+                <div className="stars-front"></div>
               </div>
-              <div class="rocket">
-                <div class="fuselage">
-                  <div class="nose"></div>
-                  <div class="head">
-                    <span class="window"></span>
+              <div className="rocket">
+                <div className="fuselage">
+                  <div className="nose"></div>
+                  <div className="head">
+                    <span className="window"></span>
                   </div>
-                  <div class="neck"></div>
-                  <div class="body"></div>
-                  <div class="reactor"></div>
-                  <div class="fire">
-                    <div class="spark1"></div>
-                    <div class="spark2"></div>
-                    <div class="spark3"></div>
-                    <div class="spark4"></div>
-                    <div class="spark5"></div>
-                    <div class="spark6"></div>
+                  <div className="neck"></div>
+                  <div className="body"></div>
+                  <div className="reactor"></div>
+                  <div className="fire">
+                    <div className="spark1"></div>
+                    <div className="spark2"></div>
+                    <div className="spark3"></div>
+                    <div className="spark4"></div>
+                    <div className="spark5"></div>
+                    <div className="spark6"></div>
                   </div>
                 </div>
-                <div class="left-fin"></div>
-                <div class="left-fin-end"></div>
-                <div class="right-fin"></div>
-                <div class="right-fin-end"></div>
+                <div className="left-fin"></div>
+                <div className="left-fin-end"></div>
+                <div className="right-fin"></div>
+                <div className="right-fin-end"></div>
               </div>
             </section>
           </Container>
@@ -71,7 +69,7 @@ export default function HomePage() {
         ></hr>
       </div>
 
-      <Container className='homepage-btn-container'>
+      <Container className="homepage-btn-container">
         <ButtonToolbar>
           <Button
             role="group"
@@ -83,7 +81,7 @@ export default function HomePage() {
           <Button
             role="group"
             className="nasa-button"
-            onClick={() => history.push("/nasa")}           
+            onClick={() => history.push("/nasa")}
           >
             Explore Nasa
           </Button>

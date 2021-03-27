@@ -2,17 +2,17 @@ import React, { useState, useEffect } from "react";
 import Axios from "axios";
 import { Container, ListGroup, ListGroupItem } from "reactstrap";
 import { useHistory } from "react-router-dom";
-import "./Payloads.css";
+import './Dragons.css'
 
-export default function Payloads() {
+export default function Dragons() {
   const history = useHistory();
-  const [payloads, setPayloads] = useState([]);
+  const [dragons, setDragons] = useState([]);
 
   const fetchData = () => {
-    Axios.get("https://api.spacexdata.com/v4/payloads")
+    Axios.get("https://api.spacexdata.com/v4/dragons")
       .then((res) => {
-        setPayloads(res.data);
-        // console.log(res.data);
+        setDragons(res.data);
+        console.log(res.data);
       })
       .catch((err) => {
         console.log(err);
@@ -24,20 +24,20 @@ export default function Payloads() {
   }, []);
   return (
     <div>
-      <Container className="spacex-payloads-container">
-        <h1 style={{ textAlign: "center" }}>Payloads</h1>
+      <Container className="spacex-dragons-container">
+        <h1 style={{ textAlign: "center" }}>Dragons</h1>
       </Container>
       <Container className="mt-3">
-        {payloads.map((payload) => {
+        {dragons.map((dragon) => {
           return (
-            <ListGroup key={payload.id}>
+            <ListGroup key={dragon.id}>
               <span
                 onClick={() => {
-                  history.push("/payloads/" + payload.id);
+                  history.push("/dragons/" + dragon.id);
                 }}
               >
-                <ListGroupItem action className="spacex-payloads-list">
-                  Name: {payload.name}
+                <ListGroupItem action className="spacex-dragons-list">
+                  Name: {dragon.name}
                 </ListGroupItem>
               </span>
             </ListGroup>

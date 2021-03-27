@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 import Axios from "axios";
 import { Container, ListGroup, ListGroupItem } from "reactstrap";
@@ -13,7 +12,6 @@ export default function Rockets() {
     Axios.get("https://api.spacexdata.com/v4/rockets")
       .then((res) => {
         setRockets(res.data);
-        // console.log(res.data);
       })
       .catch((err) => {
         console.log(err);
@@ -31,11 +29,11 @@ export default function Rockets() {
       <Container className="mt-3">
         {rockets.map((rocket) => {
           return (
-            <ListGroup>
+            <ListGroup key={rocket.id}>
               <span
                 onClick={() => {
                   history.push("/rockets/" + rocket.id);
-                  console.log('Button Pressed')
+                  console.log("Button Pressed");
                 }}
               >
                 <ListGroupItem action className="spacex-rockets-list">

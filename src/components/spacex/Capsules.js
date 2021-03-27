@@ -30,14 +30,15 @@ export default function Capsules() {
       <Container className="mt-3">
         {capsules.map((capsule) => {
           return (
-            <ListGroup>
+            <ListGroup key={capsule.id}>
               <span
                 onClick={() => {
-                  history.push("/capsules/" + capsule.serial);
+                  history.push("/capsules/" + capsule.id);
                 }}
               >
                 <ListGroupItem action className="spacex-capsules-list">
                   Serial Number: {capsule.serial}
+                  ID: {capsule.id}
                 </ListGroupItem>
               </span>
             </ListGroup>

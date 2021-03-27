@@ -3,16 +3,16 @@ import Axios from "axios";
 import { useParams } from "react-router-dom";
 import { Card, CardText, Container } from "reactstrap";
 
-export default function SpecificPayload() {
+export default function SpecificStarLink() {
   let { id } = useParams();
-  const [specificPayloadData, setSpecificPayloadData] = useState([]);
+  const [specificStarLink, setSpecificStarLink] = useState([]);
 
   // NEEDS TO RUN AFTER BUTTON IS CLICKED FOR SPECIFIC LAUNCH
   useEffect(() => {
-    Axios.get(`https://api.spacexdata.com/v4/payloads/${id}`)
+    Axios.get(`https://api.spacexdata.com/v4/starlink/${id}`)
       .then((res) => {
         console.log(res.data);
-        setSpecificPayloadData(res.data);
+        setSpecificStarLink(res.data);
       })
       .catch((err) => {
         console.log(err);
@@ -28,15 +28,17 @@ export default function SpecificPayload() {
             backgroundColor: "#343435",
           }}
         >
-          <CardText tag='h3' style={{ color: "#FFF" }}>Name: {specificPayloadData.name}</CardText>
+          <CardText tag='h3' style={{ color: "#FFF" }}>Name: {}</CardText>
           <CardText tag='h3' style={{ color: "#FFF" }}>
-            Manufacturer: {specificPayloadData.manufacturers}
+            Manufacturer: {specificStarLink.manufacturers}
           </CardText>
           <CardText tag='h3' style={{ color: "#FFF" }}>
-            Type: {specificPayloadData.type}
+            Type: {specificStarLink.type}
           </CardText>
-          <CardText tag='h3' style={{ color: "#FFF" }}>Reused: {specificPayloadData.reused}</CardText>
-          <CardText tag='h3' style={{ color: "#FFF" }}>Orbit: {specificPayloadData.orbit}</CardText>
+          <CardText tag='h3' style={{ color: "#FFF" }}>Reused: {specificStarLink.reused}</CardText>
+          <CardText tag='h3' style={{ color: "#FFF" }}>Orbit: {specificStarLink.orbit}</CardText>
+          <CardText tag='h3' style={{ color: "#FFF" }}>ID: {specificStarLink.id}</CardText>
+
         </Card>
       </Container>
     </div>

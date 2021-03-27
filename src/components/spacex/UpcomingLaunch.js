@@ -11,7 +11,6 @@ export default function UpcomingLaunch() {
   const fetchData = () => {
     Axios.get("https://api.spacexdata.com/v4/launches/upcoming")
       .then((res) => {
-        // console.log(res.data);
         setUpcomingData(res.data);
       })
       .catch((err) => {
@@ -30,7 +29,7 @@ export default function UpcomingLaunch() {
       <Container className="mt-3">
         {upcomingData.map((launch) => {
           return (
-            <ListGroup>
+            <ListGroup key={launch.id}>
               <span
                 onClick={() => {
                   history.push("/launch/" + launch.id);

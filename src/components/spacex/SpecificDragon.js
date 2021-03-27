@@ -3,17 +3,16 @@ import Axios from "axios";
 import { useParams } from "react-router-dom";
 import { Card, CardText, Container } from "reactstrap";
 
-export default function SpecificCapsule() {
+export default function SpecificDragon() {
   let { id } = useParams();
-  console.log(id)
-  const [specificCapsuleData, setSpecificCapsuleData] = useState([]);
+  const [specificDragonData, setSpecificDragonData] = useState([]);
 
   // NEEDS TO RUN AFTER BUTTON IS CLICKED FOR SPECIFIC LAUNCH
   useEffect(() => {
-    Axios.get(`https://api.spacexdata.com/v4/capsules/${id}`)
+    Axios.get(`https://api.spacexdata.com/v4/dragons/${id}`)
       .then((res) => {
         console.log(res.data);
-        setSpecificCapsuleData(res.data);
+        setSpecificDragonData(res.data);
       })
       .catch((err) => {
         console.log(err);
@@ -29,19 +28,24 @@ export default function SpecificCapsule() {
           }}
         >
           <CardText tag="h3" style={{ color: "#FFF" }}>
-            Serial: {specificCapsuleData.serial}
+            Name: {specificDragonData.name}
+          </CardText>
+
+          <CardText tag="h3" style={{ color: "#FFF" }}>
+            Type: {specificDragonData.type}
           </CardText>
           <CardText tag="h3" style={{ color: "#FFF" }}>
-            Status: {specificCapsuleData.status}
+            Reused: {specificDragonData.first_flight}
           </CardText>
           <CardText tag="h3" style={{ color: "#FFF" }}>
-            Reuse Count:{specificCapsuleData.reuse_count}
+            First Flight: {specificDragonData.orbit}
           </CardText>
           <CardText tag="h3" style={{ color: "#FFF" }}>
-            Last Update: {specificCapsuleData.last_update}
+            Description: {specificDragonData.description}
           </CardText>
         </Card>
       </Container>
     </div>
   );
 }
+// manufacturers, type, resused, orbit launch

@@ -5,7 +5,7 @@
   justify-content: space-around;
 }
 
-.spacex-latestlaunch-card {
+.spacex-homepage-card {
   background-color: #343435;
   width: 20.5rem;
   height: 15rem;
@@ -14,59 +14,6 @@
   margin-top: 2rem;
 }
 
-.spacex-upcominglaunches-card {
-  background-color: #343435;
-  width: 20.5rem;
-  height: 15rem;
-  text-align: center;
-  align-items: center;
-  margin-top: 2rem;
-}
-
-.spacex-dragonseries-card {
-  background-color: #343435;
-  width: 20.5rem;
-  height: 15rem;
-  text-align: center;
-  align-items: center;
-  margin-top: 2rem;
-}
-
-.spacex-rockets-card {
-  background-color: #343435;
-  width: 20.5rem;
-  height: 15rem;
-  text-align: center;
-  align-items: center;
-  margin-top: 2rem;
-}
-
-.spacex-capsules-card {
-  background-color: #343435;
-  width: 20.5rem;
-  height: 15rem;
-  text-align: center;
-  align-items: center;
-  margin-top: 2rem;
-}
-
-.spacex-payloads-card {
-  background-color: #343435;
-  width: 20.5rem;
-  height: 15rem;
-  text-align: center;
-  align-items: center;
-  margin-top: 2rem;
-}
-
-.spacex-starship-card {
-  background-color: #343435;
-  width: 20.5rem;
-  height: 15rem;
-  text-align: center;
-  align-items: center;
-  margin-top: 2rem;
-}
 
 .twitter-container {
   width: 400px;

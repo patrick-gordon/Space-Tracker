@@ -15,7 +15,7 @@ export default function SpaceXHomePage() {
       <Container className="spacex-card-container">
         <Card
           inverse
-          className="spacex-latestlaunch-card"
+          className="spacex-homepage-card"
           onClick={() => history.push("/latestlaunch")}
         >
           <CardTitle tag="h2" className="mb-5">
@@ -26,7 +26,7 @@ export default function SpaceXHomePage() {
 
         <Card
           inverse
-          className="spacex-upcominglaunches-card"
+          className="spacex-homepage-card"
           onClick={() => history.push("/upcominglaunch")}
         >
           <CardTitle tag="h2" className="mb-5">
@@ -37,8 +37,8 @@ export default function SpaceXHomePage() {
 
         <Card
           inverse
-          className="spacex-dragonseries-card"
-          onClick={() => history.push("/")}
+          className="spacex-homepage-card"
+          onClick={() => history.push("/dragons")}
         >
           <CardTitle className="mb-5" tag="h2">
             Dragon Series Information
@@ -48,7 +48,7 @@ export default function SpaceXHomePage() {
 
         <Card
           inverse
-          className="spacex-rockets-card"
+          className="spacex-homepage-card"
           onClick={() => history.push("/rockets")}
         >
           <CardTitle className="mb-5" tag="h2">
@@ -59,7 +59,7 @@ export default function SpaceXHomePage() {
 
         <Card
           inverse
-          className="spacex-capsules-card"
+          className="spacex-homepage-card"
           onClick={() => history.push("/capsules")}
         >
           <CardTitle className="mb-5" tag="h2">
@@ -70,7 +70,7 @@ export default function SpaceXHomePage() {
 
         <Card
           inverse
-          className="spacex-payloads-card"
+          className="spacex-homepage-card"
           onClick={() => history.push("/payloads")}
         >
           <CardTitle className="mb-5" tag="h2">
@@ -81,11 +81,21 @@ export default function SpaceXHomePage() {
 
         <Card
           inverse
-          className="spacex-starship-card"
-          onClick={() => history.push("/")}
+          className="spacex-homepage-card"
+          onClick={() => history.push("/starlink")}
         >
           <CardTitle className="mb-5" tag="h2">
-            Starship Updates and News
+            StarLink Satellites
+          </CardTitle>
+          <FontAwesomeIcon icon={faArrowAltCircleRight} size="5x" />
+        </Card>
+        <Card
+          inverse
+          className="spacex-homepage-card"
+          onClick={() => history.push("/")}
+        >
+          <CardTitle tag="h2" className="mb-5">
+            Coming Soon
           </CardTitle>
           <FontAwesomeIcon icon={faArrowAltCircleRight} size="5x" />
         </Card>
@@ -95,11 +105,11 @@ export default function SpaceXHomePage() {
           className="twitter-timeline"
           href="https://twitter.com/spacex?ref_src=twsrc%5Etfw"
           data-height="600"
-          data-chrome="transparent"
+          // data-chrome="transparent"
           data-border-color="#FFFF"
           data-theme="dark"
         >
-          Tweets by Elon Musk
+          Tweets by SpaceX 
         </a>
       </Container>
     </div>

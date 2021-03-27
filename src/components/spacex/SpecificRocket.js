@@ -31,7 +31,7 @@ export default function SpecificRocket() {
             Name: {specificRocketData.name}
           </CardText>
           <CardText tag="h3" style={{ color: "#FFF" }}>
-            Date: {specificRocketData.description}
+            First Flight: {specificRocketData.first_flight}
           </CardText>
           <CardText tag="h3" style={{ color: "#FFF" }}>
             Success Rate: {specificRocketData.success_rate_pct}%
@@ -40,10 +40,10 @@ export default function SpecificRocket() {
             Active: {specificRocketData.active}
           </CardText>
           <CardText tag="h3" style={{ color: "#FFF" }}>
-            Cost Per Launch: {specificRocketData.cost_per_launch}
+            Cost Per Launch: ${specificRocketData.cost_per_launch}
           </CardText>
           <CardText tag="h3" style={{ color: "#FFF" }}>
-            First Flight: {specificRocketData.first_flight}
+            Description: {specificRocketData.description}
           </CardText>
         </Card>
       </Container>
