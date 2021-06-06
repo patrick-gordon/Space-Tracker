@@ -12,6 +12,7 @@ export default function Rockets() {
     Axios.get("https://api.spacexdata.com/v4/rockets")
       .then((res) => {
         setRockets(res.data);
+        console.log(res.data)
       })
       .catch((err) => {
         console.log(err);

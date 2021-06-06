@@ -10,7 +10,7 @@ import Capsules from './components/spacex/Capsules';
 import SpecificCapsule from "./components/spacex/SpecificCapsule";
 import Payloads from './components/spacex/Payloads';
 import SpecificPayload from './components/spacex/SpecficPayload'
-import NavBar from "./components/NavBar";
+import NavBar from "./components/navigation/NavBar";
 import ApodPage from "./components/nasa/ApodPage";
 import LatestLaunch from "./components/spacex/LatestLaunch";
 import StarLink from './components/spacex/StarLink';

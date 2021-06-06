@@ -17,6 +17,7 @@ export default function HomePage() {
         <Container className="homepage-wrapper-container">
           <Container className="homepage-words-container">
             <h1>Your home for all space</h1>
+            <p>Find the next and recent SpaceX launches, save your favorite information, and view the Nasa Photo of The Day!</p>
           </Container>
           <Container>
             <section className="space">
